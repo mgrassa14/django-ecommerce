@@ -13,9 +13,9 @@ CATEGORY_CHOICES = (
 )
 
 LABEL_CHOICES = (
-    ('S', 'Small'),
-    ('M', 'Medium'),
-    ('L', 'Larger')
+    ('P', 'primary'),
+    ('S', 'secondary'),
+    ('D', 'danger')
     
 )
 
@@ -44,6 +44,7 @@ class Item(models.Model):
     slug = models.SlugField()
     description = models.TextField()
     image = models.ImageField()
+
 
     def __str__(self):
         return self.title
